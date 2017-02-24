@@ -13,6 +13,7 @@ class App extends Component {
       colorList: []
     }
   }
+  
 
   noteColorValue(colorInputValue) {
     var colorList = this.state.colorList
@@ -23,12 +24,12 @@ class App extends Component {
 
   }
   render() {
-    const {colorValue, colorList} = this.state
+    const {colorValue, colorList, noteText} = this.state
     return (
       <Container fluid>
         <Note colorValue={colorValue} noteColorValue={this.noteColorValue.bind(this)}/>
         <Divider />
-        <Board colorValue={colorValue} colorList={colorList}/>
+        <Board colorList={colorList}/>
       </Container>
     );
   }
